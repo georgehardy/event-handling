@@ -48,6 +48,16 @@ function three () {
   three.addEventListener('mouseleave', makeWhite)
 }
 // CREATE FUNCTION four HERE
+function four () {
+  // First, we have to find the element:
+  var four = document.getElementById('four')
+
+  // Next, we add an event listener to it:
+  four.addEventListener('click', makePurple)
+
+  // Finally, we add four to make the colour white again
+  four.addEventListener('mouseleave', makeWhite)
+}
 
 // Changes the background color of event's target
 function makeBlue (evt) {
@@ -60,6 +70,10 @@ function makeGreen (evt) {
 
 function makeYellow (evt) {
   evt.target.style.backgroundColor = 'yellow'
+}
+
+function makePurple (evt) {
+  evt.target.style.backgroundColor = 'purple'
 }
 
 function makeWhite (evt) {
